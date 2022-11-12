@@ -10,6 +10,8 @@ TEST_FILE = "lab1116.moto"
 
 @mock_s3
 def test_upload():
+    os.environ["AWS_ACCESS_KEY_ID"] = "test"
+    os.environ["AWS_SECRET_ACCESS_KEY"] = "test"
     # make scope global
     global TEST_BUCKET
     global TEST_FILE
