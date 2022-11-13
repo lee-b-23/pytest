@@ -19,8 +19,8 @@ TEST_FILE = "lab1116.moto"
 @mock_s3
 def test_upload():
     moto_credentials_file_path = Path(__file__).parent.absolute() / 'dummy_aws_credentials'
-    """os.environ['AWS_SHARED_CREDENTIALS_FILE'] = str(moto_credentials_file_path)
-    os.environ['AWS_ACCESS_KEY_ID'] = 'test'
+    os.environ['AWS_SHARED_CREDENTIALS_FILE'] = str(".aws/credentials")
+    """os.environ['AWS_ACCESS_KEY_ID'] = 'test'
     os.environ['AWS_SECRET_ACCESS_KEY'] = 'test'"""
     # make scope global
     global TEST_BUCKET
