@@ -5,11 +5,11 @@ import comp630
 import boto3
 from moto import mock_s3
 
-os.environ['AWS_ACCESS_KEY_ID'] = 'testing'
+"""os.environ['AWS_ACCESS_KEY_ID'] = 'testing'
 os.environ['AWS_SECRET_ACCESS_KEY'] = 'testing'
 os.environ['AWS_SECURITY_TOKEN'] = 'testing'
 os.environ['AWS_SESSION_TOKEN'] = 'testing'
-os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
+os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'"""
 
 
 # test bucket specific to class and person
@@ -19,9 +19,9 @@ TEST_FILE = "lab1116.moto"
 @mock_s3
 def test_upload():
     moto_credentials_file_path = Path(__file__).parent.absolute() / 'dummy_aws_credentials'
-    os.environ['AWS_SHARED_CREDENTIALS_FILE'] = str(moto_credentials_file_path)
+    """os.environ['AWS_SHARED_CREDENTIALS_FILE'] = str(moto_credentials_file_path)
     os.environ["AWS_ACCESS_KEY_ID"] = "test"
-    os.environ["AWS_SECRET_ACCESS_KEY"] = "test"
+    os.environ["AWS_SECRET_ACCESS_KEY"] = "test""""
     # make scope global
     global TEST_BUCKET
     global TEST_FILE
